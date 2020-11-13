@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Show Hidden Password</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      .input__container {
+        position: relative;
+        overflow: hidden;
+        border: 1px solid black;
+        border-radius: 10px;
+        max-width: 250px;
+      }
+
+      #input-password {
+        width: 100%;
+        border: none;
+        padding: 10px 20px;
+      }
+
+      #input-password:focus {
+        outline: none;
+      }
+
+      .input__container img {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input__container">
+      <input id="input-password" type="password" />
+      <img id="icon" onclick="handleClick()" src="visibility.svg" alt="" />
+    </div>
+    <script>
+      let type = "password";
+      const inputPassword = document.getElementById("input-password");
+      const icon = document.querySelector("#icon");
+      function handleClick() {
+        if (type === "password") {
+          inputPassword.type = "text";
+          icon.src = "visibility_off.svg";
+          type = "text";
+        } else {
+          inputPassword.type = "password";
+          icon.src = "visibility.svg";
+          type = "password";
+        }
+      }
+    </script>
+  </body>
+</html>

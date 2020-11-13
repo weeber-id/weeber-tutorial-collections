@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tutorial Hidden Show Input</title>
+    <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 20px;
+      }
+
+      .input__container {
+        position: relative;
+        width: 250px;
+      }
+
+      #input-password {
+        width: 100%;
+        padding: 10px 20px;
+        border-radius: 10px;
+      }
+
+      #input-password:focus {
+        outline: none;
+      }
+
+      .icon {
+        cursor: pointer;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input__container">
+      <input id="input-password" type="password" />
+      <img class="icon" src="visibility.svg" onclick="handleClick()" />
+    </div>
+    <script>
+      let inputType = "password";
+      let iconSource = "visibility.svg";
+      const inputPassword = document.getElementById("input-password");
+
+      function handleClick() {
+        if (inputType === "password") {
+          inputPassword.type = "text";
+          inputType = "text";
+          document.querySelector(".icon").src = "visibility_off.svg";
+        } else {
+          inputPassword.type = "password";
+          inputType = "password";
+          document.querySelector(".icon").src = "visibility.svg";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0f81c2;
+  padding: 10px;
+}
+
+.btn {
+  border: none;
+  outline: none;
+  height: 50px;
+  min-width: 200px;
+  border-radius: 7px;
+  background: #0f81c2;
+  box-shadow: 5px 5px 12px #0c679b, -5px -5px 12px #129be9;
+  cursor: pointer;
+  color: white;
+}
+
+.btn:active {
+  border-radius: 7px;
+  background: #0f81c2;
+  box-shadow: inset 5px 5px 12px #0c679b, inset -5px -5px 12px #129be9;
+}

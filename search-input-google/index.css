@@ -1,0 +1,39 @@
+.container {
+  padding: 20px;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.input__container {
+  display: flex;
+  align-items: center;
+  border: 1px solid #dfe1e5;
+  width: 690px;
+  padding: 10px;
+  border-radius: 36px;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+.input__container:hover {
+  box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.input__text {
+  border: none;
+  width: calc(100% - 30px);
+}
+
+.input__icon-search {
+  height: 24px;
+  width: 24px;
+}
+
+.input__icon-search svg {
+  fill: #4285f4;
+}
